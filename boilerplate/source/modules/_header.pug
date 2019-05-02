@@ -1,0 +1,25 @@
+//-------------------------------------------------------
+//- Modules :: Header
+//-------------------------------------------------------
+
+mixin header()
+  header
+    .container.header
+      .logo
+        h1.logo-title 
+          a(href="home.html") Brandi
+        span I'm your tag line
+      a.navbar-brand.d-none(href="#")
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="menu" aria-controls="navbarSupportedContent" aria-expanded="false")
+          span.navbar-toggler-icon
+      ul.menu.nav.justify-content-end
+        li.nav-item
+          a.nav-link.active Home
+        li.nav-item
+          a.nav-link Features
+        li.nav-item
+          a.nav-link Works
+        li.nav-item
+          a.nav-link Team
+        li.nav-item
+          a.nav-link Contacts

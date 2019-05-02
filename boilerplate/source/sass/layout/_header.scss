@@ -1,0 +1,57 @@
+// ======================================================
+// Layout :: Header
+// ======================================================
+// Start classname with prefix `l-`
+
+header {
+  height: 70px;
+  background: linear-gradient(to right, #101636, #aaaaaf, #101636);
+  a:not([href]):not([tabindex]) {
+    color: $cl-white;
+    cursor: pointer;
+    font-size: 13px;
+    &:hover {
+      color: $cl-blue;
+      opacity: .8;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .logo-title {
+    a {
+      font-size: $font-sixe-extra-large;
+      font-family: $font-family-special;
+      color: $cl-white;
+    }
+  }
+  .form-control {
+    border: 0;
+    vertical-align: bottom;
+    border-radius: 0;
+    padding: 0;
+  }
+  span {
+    display: inline-block;
+    border-left: 1px solid $cl-gray;
+    padding-left: 10px;
+    line-height: 16px;
+    font-weight: $font-weight-light;
+    color: $cl-white;
+    font-size: $font-size-extral-small;
+    height: 17px;
+    width: 132px;
+    margin-left: 20px;
+  }
+}
+

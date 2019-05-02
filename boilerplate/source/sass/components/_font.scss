@@ -1,0 +1,30 @@
+/* pacifico-regular - cyrillic_vietnamese_latin-ext_latin */
+@font-face {
+  font-family: Pacifico;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/pacifico-v13-cyrillic_vietnamese_latin-ext_latin-regular.eot');
+  src:
+    local('Pacifico Regular'),
+    local('Pacifico-Regular'),
+    url('../fonts/pacifico-v13-cyrillic_vietnamese_latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/pacifico-v13-cyrillic_vietnamese_latin-ext_latin-regular.woff2') format('woff2'),
+    url('../fonts/pacifico-v13-cyrillic_vietnamese_latin-ext_latin-regular.woff') format('woff'),
+    url('../fonts/pacifico-v13-cyrillic_vietnamese_latin-ext_latin-regular.ttf') format('truetype'),
+    url('../fonts/pacifico-v13-cyrillic_vietnamese_latin-ext_latin-regular.svg#Pacifico') format('svg');
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-sans-v16-latin-regular.eot');
+  src:
+    local('Open Sans Regular'),
+    local('OpenSans-Regular'),
+    url('../fonts/open-sans-v16-latin-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/open-sans-v16-latin-regular.woff2') format('woff2'),
+    url('../fonts/open-sans-v16-latin-regular.woff') format('woff'),
+    url('../fonts/open-sans-v16-latin-regular.ttf') format('truetype'),
+    url('../fonts/open-sans-v16-latin-regular.svg#OpenSans') format('svg');
+}
