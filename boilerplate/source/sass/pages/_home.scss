@@ -89,12 +89,14 @@
       border: 1px solid $cl-green-dark;
       border-radius: 50%;
       width: 40px;
+      height: 40px;
       position: absolute;
       left: 0;
-      font-family: 'Font Awesome 5 Free';
+      font-family: $font-icon;
       font-weight: $font-weight-extra-bold;
       color: $cl-green-dark;
       text-align: center;
+      line-height: 36px;
     }
     .branding:before {
       content: '\f56b';

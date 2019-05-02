@@ -1,3 +1,18 @@
-$(document).ready(function() {
-  console.log('Hello from ./source/js/_test.js');
+$(document).ready(function () {
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
 });
