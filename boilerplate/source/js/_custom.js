@@ -2,7 +2,7 @@ $(document).ready(function () {
   $('.js-product').owlCarousel({
     loop: true,
     margin: 10,
-    nav: true,
+    nav: false,
     autoplay:true,
     autoplayTimeout:2000,
     autoplayHoverPause:true,
@@ -21,10 +21,11 @@ $(document).ready(function () {
   $('.js-meet-team').owlCarousel({
     loop: true,
     margin: 10,
-    nav: true,
+    nav: false,
     autoplay:true,
     autoplayTimeout:2000,
     autoplayHoverPause:true,
+    items: 4,
     responsive: {
       0: {
         items: 1

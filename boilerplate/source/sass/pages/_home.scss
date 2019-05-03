@@ -69,7 +69,7 @@
     font-size: 28px;
     font-weight: $font-weight-extra-bold - 100;
     text-align: center;
-    padding-top: 77px;
+    padding-top: 117px;
     margin-bottom: 106px;
   }
   &-info {
@@ -92,13 +92,14 @@
     &-title {
       font-size: 20px;
       font-weight: $font-weight-bold;
+      text-align: left;
     }
     p {
       font-size: 13px;
       text-align: left;
     }
     &-info {
-      padding-left: 30px;
+      padding-left: 52px;
     }
     &-info:before {
       border: 1px solid $cl-green-dark;
@@ -130,7 +131,7 @@
     justify-content: center;
     &-tabs {
       border: 0;
-      margin-bottom: 30px;
+      margin-bottom: 37px;
     }
     &-link {
       font-weight: $font-weight-bold;
@@ -224,11 +225,30 @@
   }
 }
 
+$span: 'span';
+
 .statistics {
-  background: url('../images/SantiagoGroup_1.jpg');
-  &-info {
+  position: relative;
+  background: url('../images/meet-team3.jpg') center center no-repeat;
+  background-size: cover;
+  &:before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    top: 0;
+    left: 0;
+    background: rgba(37, 60, 75, .8);
+    z-index: 5;
+  }
+  &__inner {
+    position: relative;
+    z-index: 10;
+  }
+  &__info {
     text-align: center;
     padding-bottom: 158px;
+    color: #fff;
     i {
       width: 130px;
       height: 130px;
@@ -238,19 +258,152 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      font-size: 25px; 
+      font-size: 25px;
     }
   }
-  &-data {
+  &__data {
+    $this: &;
+
     margin-top: 20px;
     span {
       display: block;
       text-transform: uppercase;
-      font-size: 60px;
-    }
-    .text {
       font-size: 18px;
+    }
+
+    span:not(#{$this}-text) {
+      font-size: 60px;
     }
   }
 }
-
+.discuss {
+  &__sub-title {
+    font-size: 24px;
+    &--bold {
+      font-weight: 600;
+      margin-bottom: 48px;
+    }
+  }
+  &__information {
+    margin-top: 40px;
+    line-height: 30px;
+    > span {
+      display: block;
+    }
+  }
+  &__form {
+    .form-control {
+      border-width: 0 0 1px 0;
+      border-radius: 0;
+      padding-left: 0;
+      padding-bottom: 20px;
+      resize: none;
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+      }
+    }
+    &-submit {
+      background: none;
+      border: 0;
+      display: inline-flex;
+      align-items: center;
+      i {
+        color: #0eb493;
+        font-size: 18px;
+      }
+      span {
+        margin-left: 10px;
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+  }
+  &__social {
+    padding-top: 40px;
+    i {
+      display: block;
+      font-size: 18px;
+      color: #cdd2d6;
+      margin-bottom: 25px;
+    }
+  }
+}
+.map {
+  margin-bottom: 0;
+  border-bottom: 2px solid #000;
+}
+.footer {
+  background: $cl-green-dark;
+  padding: 100px 0;
+  &__logo {
+    margin-bottom: 45px;
+    line-height: 15px;
+    a {
+      font-size: $font-sixe-extra-large;
+      font-family: $font-family-special;
+      color: $cl-white;
+    }
+  }
+  &__desc {
+    color: $cl-white;
+    font-size: 15px;
+  }
+  &__title {
+    margin-bottom: 45px;
+    font-size: 18px;
+    font-weight: 600;
+    color: darken($cl-white, 15%);
+  }
+  &__form {
+    position: relative;
+    .form-control {
+      background: none;
+      width: 100%;
+      color: $cl-white;
+      margin-bottom: 27px;
+      &--border {
+        border-radius: 3px;
+        border-width: 2px;
+        border-color: $cl-white;
+      }
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+      }
+    }
+    &-submit {
+      background: none;
+      border: 0;
+      color: $cl-white;
+      position: absolute;
+      right: 10px;
+      opacity: .5;
+      transform: scaleX(1.2);
+      top: 8px;
+    }
+  }
+  &__item {
+    margin-bottom: 22px;
+    a {
+      color: $cl-white;
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+  &__about {
+    color: $cl-white;
+    a,
+    i {
+      color: $cl-black;
+      display: inline-block;
+    }
+    i {
+      margin: 0 8px;
+    }
+  }
+}
+.owl-dots button:focus {
+  outline: 0;
+  box-shadow: none;
+}
