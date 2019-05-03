@@ -223,13 +223,34 @@
     opacity: .56;
   }
 }
+
 .statistics {
+  background: url('../images/SantiagoGroup_1.jpg');
   &-info {
+    text-align: center;
+    padding-bottom: 158px;
     i {
       width: 130px;
       height: 130px;
+      margin: auto;
       border: 2px solid #ccc;
-      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 25px; 
+    }
+  }
+  &-data {
+    margin-top: 20px;
+    span {
+      display: block;
+      text-transform: uppercase;
+      font-size: 60px;
+    }
+    .text {
+      font-size: 18px;
     }
   }
 }
+
