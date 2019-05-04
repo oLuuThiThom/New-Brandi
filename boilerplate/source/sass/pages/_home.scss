@@ -8,13 +8,21 @@
   background: url('../images/bg1.jpg') center center;
   background-size: cover;
   position: relative;
-  &-info {
+
+  @include breakpoint-down(smallphone) {
+    min-height: 400px;
+  }
+  &__info {
     text-align: center;
     color: $cl-white;
     position: relative;
     top: 464px;
+
+    @include breakpoint-down(smallphone) {
+      top: 200px;
+    }
   }
-  &-content {
+  &__content {
     div {
       color: $cl-white;
       font-family: $font-family-base;
@@ -23,13 +31,21 @@
       line-height: 0;
       margin-bottom: 40px;
       margin-top: 18px;
+
+      @include breakpoint-down(phone) {
+        font-size: $font-size-extra-large;
+      }
     }
-    .create {
+    &--create {
       color: $cl-green;
     }
-    .more {
+    &--more {
       font-size: 18px;
       height: 18px;
+
+      @include breakpoint-down(phone) {
+        font-size: $font-size-base;
+      }
     }
   }
   h2 {
@@ -41,8 +57,12 @@
     line-height: 0;
     text-align: center;
     margin-bottom: 0;
+
+    @include breakpoint-down(phone) {
+      font-size: 48px;
+    }
   }
-  &-social {
+  &__social {
     position: relative;
     width: 114px;
     margin: auto;
@@ -62,7 +82,12 @@
   }
 }
 .section {
+  padding-bottom: 100px;
   text-align: center;
+
+  @include breakpoint-down(smallphone) {
+    padding-bottom: 50px;
+  }
   &-title {
     color: $cl-green-dark;
     text-transform: uppercase;
@@ -71,6 +96,42 @@
     text-align: center;
     padding-top: 117px;
     margin-bottom: 106px;
+    position: relative;
+    padding-bottom: 25px;
+
+    @include breakpoint-down(smallphone) {
+      padding-top: 50px;
+      font-size: $font-size-large;
+      padding-bottom: 10px;
+      margin-bottom: 50px;
+    }
+    &:before {
+      content: '\f004';
+      font-family: $font-icon;
+      font-weight: $font-weight-extra-bold;
+      width: 50px;
+      background: $cl-white;
+      position: absolute;
+      z-index: 10;
+      bottom: -40px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      color: $cl-gray-light2;
+
+      @include breakpoint-down(smallphone) {
+        bottom: -35px;
+      }
+    }
+    &:after {
+      content: '';
+      border: .5px solid $cl-gray-light2;
+      width: 230px;
+      position: absolute;
+      z-index: 5;
+      bottom: -24px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
   }
   &-info {
     font-size: $font-size-large;
@@ -82,26 +143,44 @@
     margin-left: 121px;
     margin-right: 121px;
     margin-bottom: 48px;
+
+    @include breakpoint-down(smallphone) {
+      margin-left: 0;
+      margin-right: 0;
+      font-size: $font-size-medium;
+    }
   }
 }
 .features {
-  min-height: 460px;
   background-color: $cl-gray-light;
+  &__title {
+    &:before {
+      background-color: $cl-gray-light;
+    }
+  }
   .product {
     color: $cl-black;
     &-title {
-      font-size: 20px;
+      font-size: $font-size-large + 2;
       font-weight: $font-weight-bold;
       text-align: left;
+
+      @include breakpoint-down(smallphone) {
+        font-size: $font-size-large;
+      }
     }
     p {
-      font-size: 13px;
+      font-size: $font-size-base - 1;
       text-align: left;
+
+      @include breakpoint-down(smallphone) {
+        font-size: $font-size-base - 1;
+      }
     }
-    &-info {
+    &__info {
       padding-left: 52px;
     }
-    &-info:before {
+    &__info:before {
       border: 1px solid $cl-green-dark;
       border-radius: 50%;
       width: 40px;
@@ -138,10 +217,14 @@
       font-size: $font-size-base;
       color: $cl-black;
       padding: 2px 13px;
+
+      @include breakpoint-down(smallphone) {
+        font-size: $font-size-extral-small;
+      }
     }
     &-link:hover,
     &-link:focus {
-      border: 0;
+      border-color: transparent;
     }
     &-link.active {
       background: $cl-green-dark;
@@ -179,9 +262,9 @@
   }
   div {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: $font-weight-bold;
     span {
-      font-weight: 300;
+      font-weight: $font-weight-light;
       display: block;
     }
   }
@@ -224,6 +307,9 @@
     opacity: .56;
   }
 }
+// .meet-team {
+//   padding-bottom: 100px;
+// }
 
 $span: 'span';
 
@@ -231,6 +317,12 @@ $span: 'span';
   position: relative;
   background: url('../images/meet-team3.jpg') center center no-repeat;
   background-size: cover;
+  &__title {
+    &:before {
+      background: $cl-black-light;
+      color: $cl-white;
+    }
+  }
   &:before {
     position: absolute;
     height: 100%;
@@ -238,7 +330,7 @@ $span: 'span';
     content: '';
     top: 0;
     left: 0;
-    background: rgba(37, 60, 75, .8);
+    background: rgba($cl-black-light1, .8);
     z-index: 5;
   }
   &__inner {
@@ -248,17 +340,32 @@ $span: 'span';
   &__info {
     text-align: center;
     padding-bottom: 158px;
-    color: #fff;
+    color: $cl-white;
+
+    @include breakpoint-down(phone) {
+      padding-bottom: 30px;
+    }
     i {
       width: 130px;
       height: 130px;
       margin: auto;
-      border: 2px solid #ccc;
+      border: 2px solid $cl-gray;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      font-size: 25px;
+      font-size: $font-size-large + 7;
+
+      @include breakpoint-down(phone) {
+        width: 80px;
+        height: 80px;
+      }
+
+      @include breakpoint-down(phone) {
+        width: 60px;
+        height: 60px;
+        font-size: $font-size-large;
+      }
     }
   }
   &__data {
@@ -268,11 +375,23 @@ $span: 'span';
     span {
       display: block;
       text-transform: uppercase;
-      font-size: 18px;
+      font-size: $font-size-large;
+
+      @include breakpoint-down(phone) {
+        font-size: $font-size-base;
+      }
     }
 
     span:not(#{$this}-text) {
       font-size: 60px;
+
+      @include breakpoint-down(phone) {
+        font-size: $font-size-extra-large;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: $font-size-base;
+      }
     }
   }
 }
@@ -280,8 +399,13 @@ $span: 'span';
   &__sub-title {
     font-size: 24px;
     &--bold {
-      font-weight: 600;
+      font-weight: $font-weight-bold;
       margin-bottom: 48px;
+
+      @include breakpoint-down(smallphone) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
     }
   }
   &__information {
@@ -302,6 +426,10 @@ $span: 'span';
         box-shadow: none;
         outline: 0;
       }
+
+      @include breakpoint-down(smallphone) {
+        margin-bottom: 30px;
+      }
     }
     &-submit {
       background: none;
@@ -309,12 +437,12 @@ $span: 'span';
       display: inline-flex;
       align-items: center;
       i {
-        color: #0eb493;
+        color: $cl-green-dark;
         font-size: 18px;
       }
       span {
         margin-left: 10px;
-        font-weight: 500;
+        font-weight: $font-weight-bold - 100;
         font-size: 16px;
       }
     }
@@ -324,23 +452,31 @@ $span: 'span';
     i {
       display: block;
       font-size: 18px;
-      color: #cdd2d6;
+      color: $cl-grey;
       margin-bottom: 25px;
     }
   }
 }
 .map {
-  margin-bottom: 0;
-  border-bottom: 2px solid #000;
+  padding-bottom: 0;
+  border-bottom: 2px solid $cl-black2;
 }
 .footer {
   background: $cl-green-dark;
   padding: 100px 0;
+
+  @include breakpoint-down(smallphone) {
+    padding: 50px 0;
+  }
   &__logo {
     margin-bottom: 45px;
     line-height: 15px;
+
+    @include breakpoint-down(smallphone) {
+      margin-bottom: 20px;
+    }
     a {
-      font-size: $font-sixe-extra-large;
+      font-size: $font-size-extra-large;
       font-family: $font-family-special;
       color: $cl-white;
     }
@@ -348,12 +484,18 @@ $span: 'span';
   &__desc {
     color: $cl-white;
     font-size: 15px;
+    line-height: 25px;
   }
   &__title {
     margin-bottom: 45px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: $font-weight-bold;
     color: darken($cl-white, 15%);
+
+    @include breakpoint-down(smallphone) {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
   }
   &__form {
     position: relative;
@@ -389,6 +531,9 @@ $span: 'span';
       color: $cl-white;
       font-size: 15px;
       font-weight: 500;
+      &:hover {
+        color: $cl-black;
+      }
     }
   }
   &__about {

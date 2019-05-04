@@ -17,7 +17,7 @@ $font-size-small  : 12px;
 $font-size-base   : 14px;
 $font-size-medium : 16px;
 $font-size-large  : 18px;
-$font-sixe-extra-large: 28px;
+$font-size-extra-large: 28px;
 // >> Font-weight
 $font-weight-light: 300;
 $font-weight-base : 400;
@@ -39,8 +39,14 @@ $z-indexes: (
 
 $cl-white : #fff;
 $cl-black : #062033;
+$cl-black2: #000;
+$cl-black-light: #2c3c4a;
+$cl-black-light1: rgb(37, 60, 75);
 $cl-gray: #ccc;
 $cl-gray-light: #f4f7f9;
+$cl-gray-light2: #e6e8ea;
+$cl-grey: #c2d2df;
 $cl-blue : #00f;
 $cl-green: #0feb9e;
 $cl-green-dark: #0eb493;
+$cl-active: #32b0ee;

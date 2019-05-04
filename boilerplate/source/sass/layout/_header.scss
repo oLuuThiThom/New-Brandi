@@ -5,13 +5,17 @@
 
 header {
   height: 70px;
-  background: linear-gradient(to right, #101636, #aaaaaf, #101636);
+  background: linear-gradient(to right, $cl-black, $cl-gray, $cl-black);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
   a:not([href]):not([tabindex]) {
     color: $cl-white;
     cursor: pointer;
     font-size: 13px;
     &:hover {
-      color: $cl-blue;
+      color: $cl-active;
       opacity: .8;
     }
   }
@@ -28,9 +32,9 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  .logo-title {
+  &__title {
     a {
-      font-size: $font-sixe-extra-large;
+      font-size: $font-size-extra-large;
       font-family: $font-family-special;
       color: $cl-white;
     }
@@ -52,6 +56,65 @@ header {
     height: 17px;
     width: 132px;
     margin-left: 20px;
+
+    @include breakpoint-down(phone) {
+      display: none;
+    }
+  }
+}
+.dropdown {
+  height: 100%;
+  display: flex;
+  align-content: center;
+}
+.menu {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .nav-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &.active {
+      border-top: 2px solid $cl-active;
+    }
+  }
+
+  @include breakpoint-down(phone) {
+    display: none;
+  }
+}
+.navbar-toggler {
+  display: none;
+  line-height: 30px;
+  color: $cl-white;
+  cursor: pointer;
+  &:hover {
+    color: $cl-gray;
+  }
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  @include breakpoint-down(phone) {
+    display: block;
+  }
+}
+.sidebar-show {
+  display: block;
+  transition: all .5s;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  .nav-item {
+    height: auto;
+    padding: 0 50px;
+    background: $cl-green-dark;
+    &:hover {
+      background: $cl-white;
+    }
   }
 }
 
