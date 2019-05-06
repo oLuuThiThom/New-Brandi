@@ -94,8 +94,8 @@
     font-size: 28px;
     font-weight: $font-weight-extra-bold - 100;
     text-align: center;
-    padding-top: 117px;
-    margin-bottom: 106px;
+    padding-top: 77px;
+    margin-bottom: 50px;
     position: relative;
     padding-bottom: 25px;
 
@@ -109,11 +109,11 @@
       content: '\f004';
       font-family: $font-icon;
       font-weight: $font-weight-extra-bold;
-      width: 50px;
+      width: 49px;
       background: $cl-white;
       position: absolute;
       z-index: 10;
-      bottom: -40px;
+      bottom: -25px;
       left: 50%;
       transform: translate(-50%, 0);
       color: $cl-gray-light2;
@@ -128,7 +128,7 @@
       width: 230px;
       position: absolute;
       z-index: 5;
-      bottom: -24px;
+      bottom: -8px;
       left: 50%;
       transform: translate(-50%, 0);
     }
@@ -153,7 +153,9 @@
 }
 .features {
   background-color: $cl-gray-light;
+  padding-bottom: 54px;
   &__title {
+    margin-bottom: 81px;
     &:before {
       background-color: $cl-gray-light;
     }
@@ -164,6 +166,7 @@
       font-size: $font-size-large + 2;
       font-weight: $font-weight-bold;
       text-align: left;
+      margin-bottom: 22px;
 
       @include breakpoint-down(smallphone) {
         font-size: $font-size-large;
@@ -172,13 +175,14 @@
     p {
       font-size: $font-size-base - 1;
       text-align: left;
+      margin-bottom: 80px;
 
       @include breakpoint-down(smallphone) {
         font-size: $font-size-base - 1;
       }
     }
     &__info {
-      padding-left: 52px;
+      padding-left: 57px;
     }
     &__info:before {
       border: 1px solid $cl-green-dark;
@@ -206,17 +210,21 @@
   }
 }
 .works {
+  &__title {
+    padding-top: 99px;
+  }
   .nav {
     justify-content: center;
     &-tabs {
       border: 0;
-      margin-bottom: 37px;
+      margin-bottom: 43px;
     }
     &-link {
       font-weight: $font-weight-bold;
       font-size: $font-size-base;
       color: $cl-black;
       padding: 2px 13px;
+      cursor: pointer;
 
       @include breakpoint-down(smallphone) {
         font-size: $font-size-extral-small;
@@ -229,8 +237,9 @@
     &-link.active {
       background: $cl-green-dark;
       border: 1px solid $cl-green-dark;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      color: $cl-white;
     }
   }
 }
@@ -270,10 +279,13 @@
   }
 }
 .work-img:hover .layer,
-.card-img:hover .layer {
+.card-item:hover .layer {
   visibility: visible;
   opacity: .8;
   transition: all .5s;
+}
+.card-item:hover .card-title {
+  color: $cl-green-dark;
 }
 .card {
   border: 0;
@@ -298,7 +310,7 @@
   .card-title {
     font-size: $font-size-large;
     font-weight: $font-weight-bold;
-    color: $cl-green-dark;
+    color: $cl-black;
   }
   .card-text {
     font-size: $font-size-base - 1;
@@ -307,9 +319,15 @@
     opacity: .56;
   }
 }
-// .meet-team {
-//   padding-bottom: 100px;
-// }
+.meet-team {
+  padding-bottom: 115px;
+  &__title {
+    padding-top: 62px;
+  }
+  &__info {
+    margin-bottom: 108px;
+  }
+}
 
 $span: 'span';
 
@@ -317,7 +335,10 @@ $span: 'span';
   position: relative;
   background: url('../images/meet-team3.jpg') center center no-repeat;
   background-size: cover;
+  padding-bottom: 158px;
   &__title {
+    padding-top: 100px;
+    margin-bottom: 40px;
     &:before {
       background: $cl-black-light;
       color: $cl-white;
@@ -339,7 +360,6 @@ $span: 'span';
   }
   &__info {
     text-align: center;
-    padding-bottom: 158px;
     color: $cl-white;
 
     @include breakpoint-down(phone) {
@@ -396,6 +416,13 @@ $span: 'span';
   }
 }
 .discuss {
+  padding-bottom: 91px;
+  &__title {
+    padding-top: 100px;
+  }
+  &__info {
+    margin-bottom: 83px;
+  }
   &__sub-title {
     font-size: 24px;
     &--bold {
@@ -436,9 +463,11 @@ $span: 'span';
       border: 0;
       display: inline-flex;
       align-items: center;
+      margin-top: 37px;
+      padding: 0;
       i {
         color: $cl-green-dark;
-        font-size: 18px;
+        font-size: 23px;
       }
       span {
         margin-left: 10px;
@@ -446,20 +475,26 @@ $span: 'span';
         font-size: 16px;
       }
     }
+    &--textare {
+      margin-top: 40px;
+    }
   }
   &__social {
-    padding-top: 40px;
+    padding-top: 2px;
+    padding-left: 37px;
     i {
       display: block;
-      font-size: 18px;
+      font-size: 22px;
       color: $cl-grey;
-      margin-bottom: 25px;
+      margin-bottom: 31px;
+      text-align: left;
     }
   }
 }
 .map {
   padding-bottom: 0;
-  border-bottom: 2px solid $cl-black2;
+  border-bottom: 5px solid $cl-black2;
+  max-height: 220px;
 }
 .footer {
   background: $cl-green-dark;
@@ -469,7 +504,7 @@ $span: 'span';
     padding: 50px 0;
   }
   &__logo {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     line-height: 15px;
 
     @include breakpoint-down(smallphone) {
@@ -483,11 +518,12 @@ $span: 'span';
   }
   &__desc {
     color: $cl-white;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 25px;
+    margin-bottom: 25px;
   }
   &__title {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     font-size: 18px;
     font-weight: $font-weight-bold;
     color: darken($cl-white, 15%);
@@ -497,8 +533,12 @@ $span: 'span';
       margin-top: 20px;
     }
   }
+  ul {
+    margin-bottom: 25px;
+  }
   &__form {
     position: relative;
+    padding-top: 7px;
     .form-control {
       background: none;
       width: 100%;
@@ -522,14 +562,14 @@ $span: 'span';
       right: 10px;
       opacity: .5;
       transform: scaleX(1.2);
-      top: 8px;
+      top: 14px;
     }
   }
   &__item {
-    margin-bottom: 22px;
+    margin-bottom: 11.5px;
     a {
       color: $cl-white;
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 500;
       &:hover {
         color: $cl-black;
@@ -538,17 +578,33 @@ $span: 'span';
   }
   &__about {
     color: $cl-white;
+    border-left: 1px solid $cl-black;
+    padding-left: 12px;
+    font-size: 13px;
     a,
     i {
       color: $cl-black;
       display: inline-block;
+      font-size: 13px;
     }
     i {
       margin: 0 8px;
     }
   }
+  &__copy {
+    margin-bottom: 25px;
+    padding-left: 12px;
+    font-size: 13px;
+  }
 }
-.owl-dots button:focus {
-  outline: 0;
-  box-shadow: none;
+.owl-theme {
+  .owl-dots {
+    button {
+      margin-top: 57px;
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+  }
 }

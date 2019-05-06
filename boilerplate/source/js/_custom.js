@@ -20,7 +20,7 @@ $(document).ready(function () {
   });
   $('.js-meet-team').owlCarousel({
     loop: true,
-    margin: 10,
+    margin: 30,
     nav: false,
     autoplay:true,
     autoplayTimeout:2000,
