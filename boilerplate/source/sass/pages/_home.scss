@@ -153,7 +153,11 @@
 }
 .features {
   background-color: $cl-gray-light;
-  padding-bottom: 54px;
+  padding-bottom: 50px;
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   &__title {
     margin-bottom: 81px;
     &:before {
@@ -176,6 +180,7 @@
       font-size: $font-size-base - 1;
       text-align: left;
       margin-bottom: 80px;
+      font-family: $font-family-base;
 
       @include breakpoint-down(smallphone) {
         font-size: $font-size-base - 1;
@@ -600,7 +605,7 @@ $span: 'span';
 .owl-theme {
   .owl-dots {
     button {
-      margin-top: 57px;
+      // margin-top: 57px;
       &:focus {
         outline: 0;
         box-shadow: none;

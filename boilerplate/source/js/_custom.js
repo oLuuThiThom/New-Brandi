@@ -1,9 +1,9 @@
 $(document).ready(function () {
   $('.js-product').owlCarousel({
     loop: true,
-    margin: 10,
+    margin: 45,
     nav: false,
-    autoplay:true,
+    // autoplay:true,
     autoplayTimeout:2000,
     autoplayHoverPause:true,
     responsive: {
